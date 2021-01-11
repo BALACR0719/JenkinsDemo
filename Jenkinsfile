@@ -1,6 +1,6 @@
 pipeline {
 //Update the custom docker agent in Jenkins file in the below section
-  agent any
+  agent none
 
   stages {
 
