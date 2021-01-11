@@ -1,8 +1,6 @@
 pipeline {
 //Update the custom docker agent in Jenkins file in the below section
-  agent {
-        label 'pipes-docker-agent-pipes-python-edp'
-  }
+  agent any
 
   stages {
 
