@@ -33,9 +33,35 @@ pipeline {
 				echo  "Installing requirements" 
           }
         }
+		
+		stage('Installing requirements'){
+        steps {
+				echo  "Installing requirements" 
+          }
+        }
+		
+		stage('test using pytest'){
+        steps {
+				echo  "test using pytest" 
+          }
+        }
+		
+		stage('publish test results'){
+        steps {
+				echo  "publish test results" 
+          }
+        }
+		
+		stage('generate egg files'){
+        steps {
+				withEnv(["HOME=${env.WORKSPACE}"]) {
+               sh 'python3 -m pip install --user --upgrade setuptools wheel'
+               sh 'python3 streamingLibrary.py bdist_egg'               
+              }
+          }
+        }
+		
     }
 
      
     }
-
-     
