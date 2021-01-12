@@ -1,5 +1,5 @@
 pipeline {
-//Update the custom docker agent in Jenkins file in the below section
+
   agent any
 
   stages {
@@ -40,15 +40,7 @@ pipeline {
         }
     }
 
-      stage('Test with pytest') {
-           steps {
-                  echo "pytest is successful"
-           }
-           }
-         }
-
-
-           
+               
 
   }
 
