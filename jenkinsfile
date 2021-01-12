@@ -6,7 +6,6 @@ pipeline {
 
     stage('Setup') {
          steps {
-
          script {
                     def workspace = pwd()
                     echo "My workspace is ${workspace}"
@@ -19,10 +18,10 @@ pipeline {
         steps {
            echo  "Pulling Branch from Github"
            checkout([$class: 'GitSCM',
-           branches: [[name: '*/master']],
+           branches: [[name: '*/main']],
            doGenerateSubmoduleConfigurations: false,
            extensions: [],
-           submoduleCfg: [],
+           submoduleCfg: []
           
         }
     }
