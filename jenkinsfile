@@ -37,11 +37,7 @@ pipeline {
           }
         }
 		
-		stage('Installing requirements'){
-        steps {
-				echo  "Installing requirements" 
-          }
-        }
+		
 		
 		stage('test using pytest'){
         steps {
