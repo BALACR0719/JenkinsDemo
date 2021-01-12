@@ -53,10 +53,7 @@ pipeline {
         steps {
 				echo  "publish test results" 
           }
-        }
-		
-		
-        }
+        }		
 		
     }
 
