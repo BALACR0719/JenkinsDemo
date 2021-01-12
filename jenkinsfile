@@ -1,3 +1,4 @@
+
 pipeline {
 
   agent any
@@ -6,6 +7,7 @@ pipeline {
 
     stage('Setup') {
          steps {
+
          script {
                     def workspace = pwd()
                     echo "My workspace is ${workspace}"
@@ -16,28 +18,24 @@ pipeline {
 
     stage('Checkout code'){
         steps {
-           echo  "Pulling Branch from Github"           
+           echo  "Pulling Branch from Github"          
         }
     }
 
     stage('Installing tools'){
         steps {
-                echo "Installing tools is performed"
+				echo  "Installing tools"  
+           }
         }
-    }
-
-     stage('Installing requirements'){
+		
+		stage('Installing requirements'){
         steps {
-                echo "Installing requirements is performed"
+				echo  "Installing requirements" 
           }
         }
     }
 
-     stage('Compile code'){
-        steps {
-                echo "Compile code is performed"
-           }
-        }
+     
     }
 
-  }
+     
