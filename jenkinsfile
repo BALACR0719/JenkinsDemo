@@ -1,7 +1,3 @@
-import groovy.json.JsonSlurper
-
-def projects = readJSON file: "${env.WORKSPACE}\\Projects.json"
-
 
 pipeline {
 
